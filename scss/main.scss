@@ -1,0 +1,102 @@
+@import "material";
+
+body {
+    font-family: "Roboto", "Noto Sans", "Arial", "Helvetica", sans-serif;
+    background-color: #fafafa;
+    color: $primary-text-color;
+    margin: auto;
+    @media screen and (max-width: $max-mobile-size) {
+        html & {
+            margin: {
+                left: 16px;
+                right: 16px;
+            }
+            max-width: none;
+        }
+    }
+    margin-top: 320px;
+    max-width: 65vw;
+}
+
+#main-header {
+    position: fixed;
+    width: 100vw;
+    top: 0px;
+    left: 0px;
+    background-color: transparent;
+    transition: background-color 75ms $swift-out;
+    
+    &.scrolled {
+        background-color: #fafafa;
+    }
+}
+
+#primary-title {
+    @include material-text("Display 4");
+    
+    font-family: "Roboto Mono", "Fira Mono", "Droid Sans Mono", "Monaco", monospace;
+    text-align: center;
+    padding: 0px;
+    border-bottom: 0px solid transparent;
+    margin: 75px 0px;
+    transition: margin 275ms $swift-out, font-size 275ms $swift-out, height 275ms $swift-out, padding 275ms $swift-out, box-shadow 275ms $swift-out, background-color 75ms $swift-out;
+    
+    img {
+        height: 140px;
+        transition: height 275ms $swift-out;
+    }
+    
+    header.scrolled & {
+        @include material-elevation(2);
+        
+        margin: 0px;
+        font-size: 0px;
+        height: 24px;
+        padding: 20px;
+        background-color: #fafafa;
+        
+        img {
+            height: 28px;
+            margin: {
+                top: -2px;
+                right: 0px;
+                bottom: -2px;
+                left: 0px;
+            };
+        }
+    }
+    
+    @media screen and (max-width: 449px) {
+        @include material-text("Display 3");
+        
+        img {
+            height: 112px;
+        }
+    }
+    
+    @media screen and (max-width: 369px) {
+        img {
+            height: 77px;
+        }
+    }
+    
+    @media screen and (max-width: 259px) {
+        img {
+            height: 56px;
+        }
+    }
+}
+
+.card {
+    @include material-elevation(2);
+    
+    margin: 16px;
+    padding: 16px;
+    background-color: #ffffff;
+    border-radius: 2px;
+}
+
+#tab-bar {
+    margin-top: -48px;
+    height: 48px;
+}
