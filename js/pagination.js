@@ -6,18 +6,18 @@ function paginate () {
     window.clearTimeout (animateTimeout);
     let prevPage = document.getElementsByClassName ("page selected")[0];
     let page = document.getElementById ("page-" + (parseInt (tabs.selected) + 1));
-    for (let page of pages) {
-        page.classList.remove ("selected");
-        page.classList.remove ("hidden");
+    for (let index = 0; index < pages.length; index++) {
+        pages[index].classList.remove ("selected");
+        pages[index].classList.remove ("hidden");
     }
     window.setTimeout (() => {
         if (page) {
             page.classList.add ("selected");
         }
         animateTimeout = window.setTimeout (() => {
-            for (let page of pages) {
-                if (!page.classList.contains ("selected")) {
-                    page.classList.add ("hidden");
+            for (let index = 0; index < pages.length; index++) {
+                if (!pages[index].classList.contains ("selected")) {
+                    pages[index].classList.add ("hidden");
                 }
             }
         }, 550);
