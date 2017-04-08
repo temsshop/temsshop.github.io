@@ -1,5 +1,7 @@
 /* line 3, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
 body {
+  font-size: 13px;
+  font-weight: 400;
   font-family: "Roboto", "Noto Sans", "Arial", "Helvetica", sans-serif;
   background-color: #fafafa;
   color: rgba(0, 0, 0, 0.87);
@@ -7,47 +9,53 @@ body {
   margin-top: 320px;
   max-width: 65vw; }
   @media screen and (max-width: 768px) {
-    /* line 9, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+    /* line 3, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+    body {
+      font-size: 14px; } }
+  @media screen and (max-width: 768px) {
+    /* line 11, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
     html body {
       margin-left: 16px;
       margin-right: 16px;
       max-width: none; } }
 
-/* line 21, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+/* line 23, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
 #main-header {
+  box-shadow: none;
   position: fixed;
   width: 100vw;
   top: 0px;
   left: 0px;
+  z-index: 1;
+  user-select: none;
   background-color: transparent;
-  transition: background-color 75ms cubic-bezier(0.4, 0, 0.2, 1); }
-  /* line 29, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 275ms cubic-bezier(0.4, 0, 0.2, 1); }
+  /* line 35, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   #main-header.scrolled {
-    background-color: #fafafa; }
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    background-color: #f5f5f5;
+    transition: background-color 75ms cubic-bezier(0.4, 0, 0.2, 1); }
 
-/* line 34, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+/* line 43, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
 #primary-title {
   font-size: 112px;
   font-weight: 300;
   font-family: "Roboto Mono", "Fira Mono", "Droid Sans Mono", "Monaco", monospace;
   text-align: center;
   padding: 0px;
-  border-bottom: 0px solid transparent;
   margin: 75px 0px;
-  transition: margin 275ms cubic-bezier(0.4, 0, 0.2, 1), font-size 275ms cubic-bezier(0.4, 0, 0.2, 1), height 275ms cubic-bezier(0.4, 0, 0.2, 1), padding 275ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 275ms cubic-bezier(0.4, 0, 0.2, 1), background-color 75ms cubic-bezier(0.4, 0, 0.2, 1); }
-  /* line 44, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+  transition: margin 275ms cubic-bezier(0.4, 0, 0.2, 1), font-size 275ms cubic-bezier(0.4, 0, 0.2, 1), height 275ms cubic-bezier(0.4, 0, 0.2, 1), padding 275ms cubic-bezier(0.4, 0, 0.2, 1); }
+  /* line 52, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   #primary-title img {
     height: 140px;
-    transition: height 275ms cubic-bezier(0.4, 0, 0.2, 1); }
-  /* line 49, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+    transition: height 200ms cubic-bezier(0.4, 0, 0.2, 1); }
+  /* line 57, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
   header.scrolled #primary-title {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     margin: 0px;
     font-size: 0px;
     height: 24px;
-    padding: 20px;
-    background-color: #fafafa; }
-    /* line 58, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+    padding: 20px; }
+    /* line 63, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
     header.scrolled #primary-title img {
       height: 28px;
       margin-top: -2px;
@@ -55,23 +63,23 @@ body {
       margin-bottom: -2px;
       margin-left: 0px; }
   @media screen and (max-width: 449px) {
-    /* line 34, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+    /* line 43, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
     #primary-title {
       font-size: 56px;
       font-weight: 400; }
-      /* line 72, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+      /* line 77, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
       #primary-title img {
         height: 112px; } }
   @media screen and (max-width: 369px) {
-    /* line 78, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+    /* line 83, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
     #primary-title img {
       height: 77px; } }
   @media screen and (max-width: 259px) {
-    /* line 84, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+    /* line 89, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
     #primary-title img {
       height: 56px; } }
 
-/* line 90, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+/* line 95, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
 .card {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   margin: 16px;
@@ -79,9 +87,40 @@ body {
   background-color: #ffffff;
   border-radius: 2px; }
 
-/* line 99, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+/* line 104, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
 #tab-bar {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  position: relative;
   margin-top: -48px;
-  height: 48px; }
+  height: 48px;
+  z-index: 2; }
+  /* line 112, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+  header.scrolled + #tab-bar {
+    z-index: 0; }
+  /* line 116, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+  #tab-bar:focus, #tab-bar :focus {
+    outline: none; }
+
+/* line 121, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+#content {
+  margin-top: 16px;
+  position: relative; }
+  /* line 125, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+  #content .page {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    opacity: 1;
+    transition: opacity 275ms cubic-bezier(0.4, 0, 0.2, 1) 275ms; }
+    /* line 133, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+    #content .page:not(.selected) {
+      opacity: 0;
+      transition: opacity 275ms cubic-bezier(0.4, 0, 0.2, 1); }
+    /* line 138, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
+    #content .page.hidden {
+      display: none; }
 
 /*# sourceMappingURL=main.css.map */
