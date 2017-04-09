@@ -93,7 +93,7 @@ body {
   .mdl-cell .card {
     margin: 0px; }
   /* line 110, /home/arm32/Projects/Web/ARM32 website/scss/main.scss */
-  .card img.full, .card video.full {
+  .card .full {
     width: calc(100% + 32px);
     height: calc(100% + 32px);
     margin: -16px;
