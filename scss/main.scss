@@ -71,7 +71,7 @@ body {
         }
     }
     
-    @media screen and (max-width: 449px) {
+    @media screen and (max-width: 849px) {
         @include material-text("Display 3");
         
         img {
